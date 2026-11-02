@@ -9,7 +9,7 @@
     --purple: #A59290; /* sea fog */
     --yellow: #E5D68E; /* custard */
     --brown: #A47864; /*mocha mousse*/
-    --dark-font: black;
+    --dark-font: #513213;
     --light-font: white;
 
 }
@@ -27,6 +27,8 @@ html {
 body {
     margin: 0;
     line-height: 1.6;
+    background-color: var(--beige);
+    color: var(--dark-font)
 }
 
 a {
@@ -39,8 +41,17 @@ a {
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem 2rem;
-    background-color: var(--pink);
-    color: var(--dark-font);
+}
+
+@media(max-width: 670px){
+    .site-header {
+        display: flex;
+        flex-direction: column;
+    }
+    .a {
+        text-wrap: nowrap;
+    }
+
 }
 
 .site-name {
@@ -57,6 +68,7 @@ nav {
 nav a {
     font-weight: 600;
     text-decoration: none;
+    font-size: 1.25rem;
 }
 
 nav a:hover,
@@ -69,12 +81,14 @@ nav a:focus-visible {
     min-height: 65vh;
     place-items: center;
     padding: 5rem 1.5rem;
-    color: var(--brown);
-    background: var(--beige);
+    background: var(--pink);
 }
 
 .title-summary {
     width: min(100%, 48rem);
+    color: var(--brown);
+    display: grid;
+    place-items: center;
 }
 
 h1 {
@@ -91,7 +105,7 @@ h1 {
 }
 
 .content-section + .content-section {
-    border-top: 1px solid #dce2ee;
+    border-top: 1px solid var(--brown);
 }
 
 .content-section h2 {
