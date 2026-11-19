@@ -85,10 +85,10 @@ nav a:focus-visible {
 }
 
 .title-summary {
-    width: min(100%, 48rem);
-    color: var(--brown);
-    display: grid;
-    place-items: center;
+    color: var(--dark-font);
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 h1 {
@@ -111,6 +111,14 @@ h1 {
 .content-section h2 {
     margin-top: 0;
     font-size: 2rem;
+}
+
+.law {
+    outline: 3px solid var(--brown);
+}
+
+.social {
+    outline: 3px solid var(--pink);
 }
 
 footer {
