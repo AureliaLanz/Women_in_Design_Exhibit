@@ -35,6 +35,8 @@ a {
     color: var(--dark-font);
 }
 
+
+
 .site-header {
     display: flex;
     align-items: center;
@@ -43,16 +45,13 @@ a {
     padding: 1rem 2rem;
 }
 
-@media(max-width: 670px){
-    .site-header {
+@media (max-width: 700px) {
+    nav {
         display: flex;
         flex-direction: column;
     }
-    .a {
-        text-wrap: nowrap;
-    }
-
 }
+
 
 .site-name {
     font-size: 1.125rem;
@@ -77,9 +76,12 @@ nav a:focus-visible {
 }
 
 .title {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 65vh;
-    place-items: center;
+    text-align: center;
+    gap: 3rem;
     padding: 5rem 1.5rem;
     background: var(--pink);
 }
@@ -113,12 +115,71 @@ h1 {
     font-size: 2rem;
 }
 
+.timeline {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 0.7rem;
+    background-color: var(--dark-font);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 0.5rem 1rem;
+    position: relative;
+    width: 50%;
+}
+
+.left::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--beige);
+    border: 4px solid var(--dark-font);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.right::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -17px;
+    background-color: var(--beige);
+    border: 4px solid var(--dark-font);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
 .law {
     outline: 3px solid var(--brown);
+    border-radius: 1rem;
 }
 
 .social {
     outline: 3px solid var(--pink);
+    border-radius: 1rem;
+}
+
+.left {
+    left: -0.5rem;
+}
+
+.right {
+    margin-left: 0.8rem;
+    left: 50%;
 }
 
 footer {
